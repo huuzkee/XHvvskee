@@ -1,0 +1,79 @@
+
+<project type="cont" name="XHvvskee" expanded="yes" catalog="no" pluginOwner="-1">
+	<project type="cont" name="ZZ_TEST" expanded="yes" catalog="no" pluginOwner="-1">
+		<file plugId="3" URL="TEST\Test001.xml" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="TEST\Test002.xml" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+	</project>
+	<project type="cont" name="AA_DEF" expanded="yes" catalog="no" pluginOwner="-1">
+		<file plugId="3" URL="Hvvskee.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="Hvvskee_Core.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="Hvvskee_Foundation.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="Hvvskee_UDDL.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="Hvvskee_UDML.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="Hvvskee_UDQL.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="Hvvskee_UQuery.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="Hvvskee_CmdBody.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="Hvvskee_CmdHeader.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="Hvvskee_Command.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="Hvvskee_CmdTrailer.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="Hvvskee_MsgIdentity.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="Hvvskee_MsgRouting.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="Hvvskee_MnfConfig.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="Hvvskee_MnfContent.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="Hvvskee_MnfSecurity.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+	</project>
+</project>

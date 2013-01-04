@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<xsd:element name="routing" type="MsgRoutingType"/>
+
+	<xsd:element name="fromAddr" type="MsgRouteAddressType"/>
+	<xsd:element name="toAddr" type="MsgRouteAddressType"/>
+
+	<xsd:simpleType name="MsgRouteAddressType">
+		<xsd:restriction base="xsd:string">
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:complexType name="MsgRoutingType">
+		<xsd:sequence>
+			<xsd:element ref="fromAddr" minOccurs="0" maxOccurs="1" />
+			<xsd:element ref="toAddr" minOccurs="0" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+
+</xsd:schema>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<xsd:element name="config" type="MnfContentType"/>
+	<xsd:element name="cnt01" type="Cnt01Type"/>
+	<xsd:element name="cnt02" type="Cnt01Type"/>
+
+	<xsd:simpleType name="Cnt01Type">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="400"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:complexType name="MnfContentType">
+		<xsd:sequence>
+			<xsd:element ref="cnt01" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cnt02" minOccurs="0" maxOccurs="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+
+
+</xsd:schema>

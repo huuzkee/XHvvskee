@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:include schemaLocation="Hvvskee_MnfSecurity.xsd"/>
+	<xsd:include schemaLocation="Hvvskee_MnfConfig.xsd"/>
+	<xsd:include schemaLocation="Hvvskee_MnfContent.xsd"/>
+
+	<xsd:element name="manifest" type="MsgManifestType"/>
+
+	<xsd:complexType name="MsgManifestType">
+		<xsd:sequence>
+			<xsd:element ref="config" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="security" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="content" minOccurs="0" maxOccurs="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+
+
+</xsd:schema>

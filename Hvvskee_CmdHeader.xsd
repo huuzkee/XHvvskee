@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<xsd:include schemaLocation="Hvvskee_MsgRouting.xsd"/>
+	<xsd:include schemaLocation="Hvvskee_MsgIdentity.xsd"/>
+	<xsd:include schemaLocation="Hvvskee_MsgManifest.xsd"/>
+
+	<xsd:element name="header" type="CmdHeaderType"/>
+
+	<xsd:complexType name="CmdHeaderType">
+		<xsd:sequence>
+			<xsd:element ref="identity"/>
+			<xsd:element ref="routing"/>
+			<xsd:element ref="manifest" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+</xsd:schema>

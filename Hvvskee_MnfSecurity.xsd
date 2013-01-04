@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<xsd:element name="security" type="MnfSecType"/>
+	<xsd:element name="sec01" type="Sec01Type"/>
+	<xsd:element name="sec02" type="Sec01Type"/>
+
+	<xsd:simpleType name="Sec01Type">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="400"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:complexType name="MnfSecType">
+		<xsd:sequence>
+			<xsd:element ref="sec01" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="sec02" minOccurs="0" maxOccurs="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+
+
+</xsd:schema>

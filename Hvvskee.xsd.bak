@@ -1,5 +1,9 @@
 <?xml version="1.0"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-<xsd:include schemaLocation="Hvvskee_Core.xsd"  />
-<xsd:include schemaLocation="Hvvskee_Query.xsd"  />
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+			xmlns="http://www.hivves.com/standards/2013/hvvskee"
+			targetNamespace="http://www.hivves.com/standards/2013/hvvskee">
+	<xsd:include schemaLocation="Hvvskee_Core.xsd"/>
+	<xsd:include schemaLocation="Hvvskee_UQuery.xsd"/>
+	<xsd:element name="hvvskee" type="Command"/>
+	<xsd:element name="hivves" type="Command"/>
 </xsd:schema>

@@ -1,0 +1,839 @@
+
+<project type="cont" name="examples" expanded="yes" catalog="no" pluginOwner="-1">
+	<custom-properties CLASSPATH="C:\PROGRA~2\STYLUS~1\Components\XML Converters for Java\lib\XMLConverters.jar;C:\PROGRA~2\STYLUS~1\examples\javaExtension;C:\PROGRA~2\STYLUS~1\Components\XML Converters for Java\examples"></custom-properties>
+	<project type="cont" name="pipelines" expanded="no" catalog="no" pluginOwner="-1">
+		<project type="cont" name="order" expanded="yes" catalog="no" pluginOwner="-1">
+			<file plugId="18" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/pipelines/order/order.pipeline"/>
+			<file plugId="9" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/pipelines/order/createFullOrder.xquery">
+				<scenarios>
+					<scenario default="yes" name="order.edi" userelativepaths="yes" externalpreview="no" useresolver="no" url="" outputurl="" processortype="datadirect" tcpport="1979713397" profilemode="0" profiledepth="" profilelength="" urlprofilexml=""
+					          commandline="" additionalpath="" additionalclasspath="" postprocessortype="none" postprocesscommandline="" postprocessadditionalpath="" postprocessgeneratedext="" host="" port="6619236" user="" password="" validateoutput="no"
+					          validator="internal" customvalidator="">
+						<parameterValue name="allBooks" value="doc('converter:CSV:sep=|:first=yes?booksXML.txt')"/>
+						<parameterValue name="ediOrder" value="doc('converter:EDI?order.edi')"/>
+						<advancedProperties name="DocumentURIResolver" value=""/>
+						<advancedProperties name="CollectionURIResolver" value=""/>
+						<advancedProperties name="ModuleURIResolver" value=""/>
+					</scenario>
+				</scenarios>
+				<MapperMetaTag>
+					<MapperInfo srcSchemaPathIsRelative="yes" srcSchemaInterpretAsXML="no" destSchemaPath="" destSchemaRoot="" destSchemaPathIsRelative="yes" destSchemaInterpretAsXML="no"/>
+					<MapperBlockPosition></MapperBlockPosition>
+					<TemplateContext></TemplateContext>
+					<MapperFilter side="source"></MapperFilter>
+				</MapperMetaTag>
+			</file>
+			<file plugId="9" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/pipelines/order/createReport.xquery">
+				<scenarios>
+					<scenario default="yes" name="Scenario1" userelativepaths="yes" externalpreview="no" useresolver="no" url="" outputurl="" processortype="datadirect" tcpport="6750322" profilemode="0" profiledepth="" profilelength="" urlprofilexml=""
+					          commandline="" additionalpath="" additionalclasspath="" postprocessortype="renderx" postprocesscommandline="" postprocessadditionalpath="" postprocessgeneratedext="" host="" port="0" user="" password="" validateoutput="no"
+					          validator="internal" customvalidator="">
+						<parameterValue name="input1" value="doc('fullOrderSample.xml')"/>
+						<advancedProperties name="DocumentURIResolver" value=""/>
+						<advancedProperties name="CollectionURIResolver" value=""/>
+						<advancedProperties name="ModuleURIResolver" value=""/>
+					</scenario>
+				</scenarios>
+				<MapperMetaTag>
+					<MapperInfo srcSchemaPathIsRelative="yes" srcSchemaInterpretAsXML="no" destSchemaPath="" destSchemaRoot="" destSchemaPathIsRelative="yes" destSchemaInterpretAsXML="no"/>
+					<MapperBlockPosition></MapperBlockPosition>
+					<TemplateContext></TemplateContext>
+					<MapperFilter side="source"></MapperFilter>
+				</MapperMetaTag>
+			</file>
+			<file plugId="2" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/pipelines/order/createReport.xsl">
+				<scenarios>
+					<scenario default="yes" name="fullOrderSample.xml" userelativepaths="yes" externalpreview="no" url="fullOrderSample.xml" htmlbaseurl="" outputurl="" processortype="saxon8" useresolver="yes" profilemode="0" profiledepth=""
+					          profilelength="" urlprofilexml="" commandline="" additionalpath="" additionalclasspath="" postprocessortype="none" postprocesscommandline="" postprocessadditionalpath="" postprocessgeneratedext="" validateoutput="no"
+					          validator="internal" customvalidator="">
+						<advancedProp name="sInitialMode" value=""/>
+						<advancedProp name="bXsltOneIsOkay" value="true"/>
+						<advancedProp name="bSchemaAware" value="true"/>
+						<advancedProp name="bGenerateByteCode" value="true"/>
+						<advancedProp name="bXml11" value="false"/>
+						<advancedProp name="iValidation" value="0"/>
+						<advancedProp name="bExtensions" value="true"/>
+						<advancedProp name="iWhitespace" value="0"/>
+						<advancedProp name="sInitialTemplate" value=""/>
+						<advancedProp name="bTinyTree" value="true"/>
+						<advancedProp name="xsltVersion" value="2.0"/>
+						<advancedProp name="bWarnings" value="true"/>
+						<advancedProp name="bUseDTD" value="false"/>
+						<advancedProp name="iErrorHandling" value="fatal"/>
+					</scenario>
+				</scenarios>
+				<MapperMetaTag>
+					<MapperInfo srcSchemaPathIsRelative="yes" srcSchemaInterpretAsXML="no" destSchemaPath="" destSchemaRoot="" destSchemaPathIsRelative="yes" destSchemaInterpretAsXML="no"/>
+					<MapperBlockPosition></MapperBlockPosition>
+					<TemplateContext></TemplateContext>
+					<MapperFilter side="source"></MapperFilter>
+				</MapperMetaTag>
+			</file>
+			<project type="cont" name="Auxiliary files" expanded="no" catalog="no" pluginOwner="-1">
+				<file plugId="19" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/pipelines/order/createReportHTML.report"/>
+				<file plugId="19" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/pipelines/order/createReportFO.report"/>
+				<file plugId="6" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/pipelines/order/order.edi">
+					<args args=""/>
+				</file>
+				<file plugId="6" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/pipelines/order/booksXML.txt">
+					<args args=""/>
+				</file>
+				<file plugId="3" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/pipelines/order/fullOrderSample.xml" catalog="no">
+					<queries/>
+					<namespaces/>
+				</file>
+				<file plugId="3" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/pipelines/order/fullOrder.xsd" catalog="no">
+					<queries/>
+					<namespaces/>
+				</file>
+			</project>
+		</project>
+		<project type="cont" name="stocks" expanded="no" catalog="no" pluginOwner="-1">
+			<file plugId="3" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/pipelines/stocks/soapRequest.xml" catalog="no">
+				<queries/>
+				<namespaces/>
+			</file>
+			<file plugId="18" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/pipelines/stocks/getHoldings.pipeline"/>
+			<file plugId="18" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/pipelines/stocks/retrieveData.pipeline"/>
+			<file plugId="9" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/pipelines/stocks/getUserID.xquery">
+				<scenarios>
+					<scenario default="yes" name="Scenario" userelativepaths="yes" externalpreview="no" useresolver="no" url="" outputurl="" processortype="datadirect" tcpport="0" profilemode="0" profiledepth="" profilelength="" urlprofilexml=""
+					          commandline="" additionalpath="" additionalclasspath="" postprocessortype="none" postprocesscommandline="" postprocessadditionalpath="" postprocessgeneratedext="" host="" port="0" user="" password="" validateoutput="no"
+					          validator="internal" customvalidator="">
+						<parameterValue name="soapRequest" value="doc('soapRequest.xml')"/>
+						<parameterValue name="allUsers" value="doc('allUsers.xml')"/>
+						<advancedProperties name="DocumentURIResolver" value=""/>
+						<advancedProperties name="CollectionURIResolver" value=""/>
+						<advancedProperties name="ModuleURIResolver" value=""/>
+					</scenario>
+				</scenarios>
+				<MapperMetaTag>
+					<MapperInfo srcSchemaPathIsRelative="yes" srcSchemaInterpretAsXML="no" destSchemaPath="" destSchemaRoot="" destSchemaPathIsRelative="yes" destSchemaInterpretAsXML="no"/>
+					<MapperBlockPosition></MapperBlockPosition>
+					<TemplateContext></TemplateContext>
+					<MapperFilter side="source"></MapperFilter>
+				</MapperMetaTag>
+			</file>
+			<file plugId="9" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/pipelines/stocks/getHoldingsFromTxt.xquery">
+				<scenarios>
+					<scenario default="yes" name="Scenario" userelativepaths="yes" externalpreview="no" useresolver="yes" url="" outputurl="" processortype="datadirect" tcpport="0" profilemode="0" profiledepth="" profilelength="" urlprofilexml=""
+					          commandline="" additionalpath="" additionalclasspath="" postprocessortype="none" postprocesscommandline="" postprocessadditionalpath="" postprocessgeneratedext="" host="" port="0" user="" password="" validateoutput="no"
+					          validator="internal" customvalidator="">
+						<parameterValue name="companiesData" value="doc('companies.xml')"/>
+						<parameterValue name="txtHoldings" value="doc('converter:CSV:sep=|:first=yes?newHoldings.txt')"/>
+						<parameterValue name="userIDRequest" value="doc('userIDSample.xml')"/>
+						<advancedProperties name="DocumentURIResolver" value=""/>
+						<advancedProperties name="CollectionURIResolver" value=""/>
+						<advancedProperties name="ModuleURIResolver" value=""/>
+					</scenario>
+				</scenarios>
+				<MapperMetaTag>
+					<MapperInfo srcSchemaPathIsRelative="yes" srcSchemaInterpretAsXML="no" destSchemaPath="" destSchemaRoot="" destSchemaPathIsRelative="yes" destSchemaInterpretAsXML="no"/>
+					<MapperBlockPosition></MapperBlockPosition>
+					<TemplateContext></TemplateContext>
+					<MapperFilter side="source"></MapperFilter>
+				</MapperMetaTag>
+			</file>
+			<file plugId="9" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/pipelines/stocks/getHoldingsFromDBase.xquery">
+				<scenarios>
+					<scenario default="yes" name="Scenario" userelativepaths="yes" externalpreview="no" useresolver="yes" url="" outputurl="" processortype="datadirect" tcpport="0" profilemode="0" profiledepth="" profilelength="" urlprofilexml=""
+					          commandline="" additionalpath="" additionalclasspath="" postprocessortype="none" postprocesscommandline="" postprocessadditionalpath="" postprocessgeneratedext="" host="" port="0" user="" password="" validateoutput="no"
+					          validator="internal" customvalidator="">
+						<parameterValue name="dbaseUsers" value="doc('converter:dBase_V?oldUsers.dbf')"/>
+						<parameterValue name="companiesData" value="doc('companies.xml')"/>
+						<parameterValue name="dbaseHoldings" value="doc('converter:dBase_V?oldHoldings.dbf')"/>
+						<parameterValue name="userIDRequest" value="doc('userIDSample.xml')"/>
+						<advancedProperties name="DocumentURIResolver" value=""/>
+						<advancedProperties name="CollectionURIResolver" value=""/>
+						<advancedProperties name="ModuleURIResolver" value=""/>
+					</scenario>
+				</scenarios>
+				<MapperMetaTag>
+					<MapperInfo srcSchemaPathIsRelative="yes" srcSchemaInterpretAsXML="no" destSchemaPath="" destSchemaRoot="" destSchemaPathIsRelative="yes" destSchemaInterpretAsXML="no"/>
+					<MapperBlockPosition></MapperBlockPosition>
+					<TemplateContext></TemplateContext>
+					<MapperFilter side="source"></MapperFilter>
+				</MapperMetaTag>
+			</file>
+			<file plugId="2" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/pipelines/stocks/createHTMLReport.xsl">
+				<scenarios>
+					<scenario default="yes" name="Scenario1" userelativepaths="yes" externalpreview="no" url="holdingsSample.xml" htmlbaseurl="" outputurl="" processortype="saxon8" useresolver="yes" profilemode="0" profiledepth="" profilelength=""
+					          urlprofilexml="" commandline="" additionalpath="" additionalclasspath="" postprocessortype="none" postprocesscommandline="" postprocessadditionalpath="" postprocessgeneratedext="" validateoutput="no" validator="internal"
+					          customvalidator="">
+						<advancedProp name="sInitialMode" value=""/>
+						<advancedProp name="bXsltOneIsOkay" value="true"/>
+						<advancedProp name="bSchemaAware" value="true"/>
+						<advancedProp name="bGenerateByteCode" value="true"/>
+						<advancedProp name="bXml11" value="false"/>
+						<advancedProp name="iValidation" value="0"/>
+						<advancedProp name="bExtensions" value="true"/>
+						<advancedProp name="iWhitespace" value="0"/>
+						<advancedProp name="sInitialTemplate" value=""/>
+						<advancedProp name="bTinyTree" value="true"/>
+						<advancedProp name="xsltVersion" value="2.0"/>
+						<advancedProp name="bWarnings" value="true"/>
+						<advancedProp name="bUseDTD" value="false"/>
+						<advancedProp name="iErrorHandling" value="fatal"/>
+					</scenario>
+				</scenarios>
+				<MapperMetaTag>
+					<MapperInfo srcSchemaPathIsRelative="yes" srcSchemaInterpretAsXML="no" destSchemaPath="" destSchemaRoot="" destSchemaPathIsRelative="yes" destSchemaInterpretAsXML="no"/>
+					<MapperBlockPosition></MapperBlockPosition>
+					<TemplateContext></TemplateContext>
+					<MapperFilter side="source"></MapperFilter>
+				</MapperMetaTag>
+			</file>
+			<file plugId="9" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/pipelines/stocks/createFOReport.xquery">
+				<scenarios>
+					<scenario default="yes" name="Scenario1" userelativepaths="yes" externalpreview="no" useresolver="yes" url="" outputurl="" processortype="datadirect" tcpport="0" profilemode="0" profiledepth="" profilelength="" urlprofilexml=""
+					          commandline="" additionalpath="" additionalclasspath="" postprocessortype="renderx" postprocesscommandline="" postprocessadditionalpath="" postprocessgeneratedext="" host="" port="0" user="" password="" validateoutput="no"
+					          validator="internal" customvalidator="">
+						<parameterValue name="input1" value="doc('holdingsSample.xml')"/>
+						<advancedProperties name="DocumentURIResolver" value=""/>
+						<advancedProperties name="CollectionURIResolver" value=""/>
+						<advancedProperties name="ModuleURIResolver" value=""/>
+					</scenario>
+				</scenarios>
+				<MapperMetaTag>
+					<MapperInfo srcSchemaPathIsRelative="yes" srcSchemaInterpretAsXML="no" destSchemaPath="" destSchemaRoot="" destSchemaPathIsRelative="yes" destSchemaInterpretAsXML="no"/>
+					<MapperBlockPosition></MapperBlockPosition>
+					<TemplateContext></TemplateContext>
+					<MapperFilter side="source"></MapperFilter>
+				</MapperMetaTag>
+			</file>
+			<project type="cont" name="Auxiliary files" expanded="no" catalog="no" pluginOwner="-1">
+				<file plugId="19" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/pipelines/stocks/holdingsFO.report"/>
+				<file plugId="19" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/pipelines/stocks/holdingsHTML.report"/>
+				<file plugId="3" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/pipelines/stocks/holdingsReport.xsd" catalog="no">
+					<queries/>
+					<namespaces/>
+				</file>
+				<file plugId="3" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/pipelines/stocks/userID.xsd" catalog="no">
+					<queries/>
+					<namespaces/>
+				</file>
+				<file plugId="3" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/pipelines/stocks/allUsers.xml" catalog="no">
+					<queries/>
+					<namespaces/>
+				</file>
+				<file plugId="3" URL="converter:dBase_V?file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/pipelines/stocks/oldUsers.dbf" catalog="no">
+					<queries/>
+					<namespaces/>
+				</file>
+				<file plugId="3" URL="converter:dBase_V?file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/pipelines/stocks/oldHoldings.dbf" catalog="no">
+					<queries/>
+					<namespaces/>
+				</file>
+				<file plugId="6" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/pipelines/stocks/newHoldings.txt">
+					<args args=""/>
+				</file>
+				<file plugId="3" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/pipelines/stocks/companies.xml" catalog="no">
+					<queries/>
+					<namespaces/>
+				</file>
+				<file plugId="3" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/pipelines/stocks/userIDSample.xml" catalog="no">
+					<queries/>
+					<namespaces/>
+				</file>
+				<file plugId="3" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/pipelines/stocks/holdingsSample.xml" catalog="no">
+					<queries/>
+					<namespaces/>
+				</file>
+			</project>
+		</project>
+		<project type="cont" name="servlet" expanded="no" catalog="no" pluginOwner="-1">
+			<file plugId="3" URL="converter:CSV:sep=|:first=yes?file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/pipelines/servlet/aFewBooks.txt" catalog="no">
+				<queries/>
+				<namespaces/>
+			</file>
+			<file plugId="6" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/pipelines/servlet/BookLookup.java">
+				<args args=""/>
+			</file>
+			<file plugId="18" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/pipelines/servlet/BookLookup.pipeline"/>
+			<file plugId="6" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/pipelines/servlet/BookServlet.java">
+				<args args=""/>
+			</file>
+			<file plugId="2" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/pipelines/servlet/ErrorReport.xsl">
+				<scenarios>
+					<scenario default="yes" name="Scenario1" userelativepaths="yes" externalpreview="no" url="converter:CSV:sep=|:first=yes?aFewBooks.txt" htmlbaseurl="" outputurl="Report.html" processortype="saxon8" useresolver="yes" profilemode="0"
+					          profiledepth="" profilelength="" urlprofilexml="" commandline="" additionalpath="" additionalclasspath="" postprocessortype="none" postprocesscommandline="" postprocessadditionalpath="" postprocessgeneratedext=""
+					          validateoutput="no" validator="internal" customvalidator="">
+						<advancedProp name="sInitialMode" value=""/>
+						<advancedProp name="bXsltOneIsOkay" value="true"/>
+						<advancedProp name="bSchemaAware" value="true"/>
+						<advancedProp name="bGenerateByteCode" value="true"/>
+						<advancedProp name="bXml11" value="false"/>
+						<advancedProp name="iValidation" value="0"/>
+						<advancedProp name="bExtensions" value="true"/>
+						<advancedProp name="iWhitespace" value="0"/>
+						<advancedProp name="sInitialTemplate" value=""/>
+						<advancedProp name="bTinyTree" value="true"/>
+						<advancedProp name="xsltVersion" value="2.0"/>
+						<advancedProp name="bWarnings" value="true"/>
+						<advancedProp name="bUseDTD" value="false"/>
+						<advancedProp name="iErrorHandling" value="fatal"/>
+					</scenario>
+				</scenarios>
+				<MapperMetaTag>
+					<MapperInfo srcSchemaPathIsRelative="yes" srcSchemaInterpretAsXML="no" destSchemaPath="" destSchemaRoot="" destSchemaPathIsRelative="yes" destSchemaInterpretAsXML="no"/>
+					<MapperBlockPosition></MapperBlockPosition>
+					<TemplateContext></TemplateContext>
+					<MapperFilter side="source"></MapperFilter>
+				</MapperMetaTag>
+			</file>
+			<file plugId="2" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/pipelines/servlet/FindBook.xsl">
+				<scenarios>
+					<scenario default="yes" name="Scenario1" userelativepaths="yes" externalpreview="no" url="converter:CSV:sep=|:first=yes?aFewBooks.txt" htmlbaseurl="" outputurl="OneBook.xml" processortype="saxon8" useresolver="yes" profilemode="0"
+					          profiledepth="" profilelength="" urlprofilexml="" commandline="" additionalpath="" additionalclasspath="" postprocessortype="none" postprocesscommandline="" postprocessadditionalpath="" postprocessgeneratedext=""
+					          validateoutput="no" validator="internal" customvalidator="">
+						<parameterValue name="RequestedIsbn" value="'007134621X'"/>
+						<advancedProp name="sInitialMode" value=""/>
+						<advancedProp name="bXsltOneIsOkay" value="true"/>
+						<advancedProp name="bSchemaAware" value="true"/>
+						<advancedProp name="bGenerateByteCode" value="true"/>
+						<advancedProp name="bXml11" value="false"/>
+						<advancedProp name="iValidation" value="0"/>
+						<advancedProp name="bExtensions" value="true"/>
+						<advancedProp name="iWhitespace" value="0"/>
+						<advancedProp name="sInitialTemplate" value=""/>
+						<advancedProp name="bTinyTree" value="true"/>
+						<advancedProp name="xsltVersion" value="2.0"/>
+						<advancedProp name="bWarnings" value="true"/>
+						<advancedProp name="bUseDTD" value="false"/>
+						<advancedProp name="iErrorHandling" value="fatal"/>
+					</scenario>
+				</scenarios>
+				<MapperMetaTag>
+					<MapperInfo srcSchemaPathIsRelative="yes" srcSchemaInterpretAsXML="no" destSchemaPath="" destSchemaRoot="" destSchemaPathIsRelative="yes" destSchemaInterpretAsXML="no"/>
+					<MapperBlockPosition></MapperBlockPosition>
+					<TemplateContext></TemplateContext>
+					<MapperFilter side="source"></MapperFilter>
+				</MapperMetaTag>
+			</file>
+			<file plugId="2" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/pipelines/servlet/GenerateReport.xsl">
+				<scenarios>
+					<scenario default="yes" name="Scenario1" userelativepaths="yes" externalpreview="no" url="OneBook.xml" htmlbaseurl="" outputurl="Report.html" processortype="saxon8" useresolver="yes" profilemode="0" profiledepth="" profilelength=""
+					          urlprofilexml="" commandline="" additionalpath="" additionalclasspath="" postprocessortype="none" postprocesscommandline="" postprocessadditionalpath="" postprocessgeneratedext="" validateoutput="no" validator="internal"
+					          customvalidator="">
+						<advancedProp name="sInitialMode" value=""/>
+						<advancedProp name="bXsltOneIsOkay" value="true"/>
+						<advancedProp name="bSchemaAware" value="true"/>
+						<advancedProp name="bGenerateByteCode" value="true"/>
+						<advancedProp name="bXml11" value="false"/>
+						<advancedProp name="iValidation" value="0"/>
+						<advancedProp name="bExtensions" value="true"/>
+						<advancedProp name="iWhitespace" value="0"/>
+						<advancedProp name="sInitialTemplate" value=""/>
+						<advancedProp name="bTinyTree" value="true"/>
+						<advancedProp name="xsltVersion" value="2.0"/>
+						<advancedProp name="bWarnings" value="true"/>
+						<advancedProp name="bUseDTD" value="false"/>
+						<advancedProp name="iErrorHandling" value="fatal"/>
+					</scenario>
+				</scenarios>
+				<MapperMetaTag>
+					<MapperInfo srcSchemaPathIsRelative="yes" srcSchemaInterpretAsXML="no" destSchemaPath="" destSchemaRoot="" destSchemaPathIsRelative="yes" destSchemaInterpretAsXML="no"/>
+					<MapperBlockPosition></MapperBlockPosition>
+					<TemplateContext></TemplateContext>
+					<MapperFilter side="source"></MapperFilter>
+				</MapperMetaTag>
+			</file>
+			<file plugId="3" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/pipelines/servlet/OneBook.xsd" catalog="no">
+				<queries/>
+				<namespaces/>
+			</file>
+			<file plugId="3" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/pipelines/servlet/OneBook.xml" catalog="no">
+				<queries/>
+				<namespaces/>
+			</file>
+		</project>
+	</project>
+	<project type="cont" name="query" expanded="no" catalog="no" pluginOwner="-1">
+		<file plugId="3" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/query/books.xml" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/query/bookstore.xml" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/query/mixedcatalog.xml" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+	</project>
+	<project type="cont" name="VideoCenter" expanded="no" catalog="no" pluginOwner="-1">
+		<file plugId="3" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/VideoCenter/movies.html" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/VideoCenter/videos.xml" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/VideoCenter/videos.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="2" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/VideoCenter/sampleVideo.xsl">
+			<scenarios>
+				<scenario default="yes" name="Video Scenario 1" userelativepaths="yes" externalpreview="no" url="videos.xml" htmlbaseurl="..\VideoCenter" outputurl="" processortype="saxon8" useresolver="yes" profilemode="0" profiledepth="" profilelength=""
+				          urlprofilexml="" commandline="" additionalpath="" additionalclasspath="" postprocessortype="none" postprocesscommandline="" postprocessadditionalpath="" postprocessgeneratedext="" validateoutput="no" validator="internal"
+				          customvalidator="">
+					<advancedProp name="sInitialMode" value=""/>
+					<advancedProp name="bXsltOneIsOkay" value="true"/>
+					<advancedProp name="bSchemaAware" value="true"/>
+					<advancedProp name="bGenerateByteCode" value="true"/>
+					<advancedProp name="bXml11" value="false"/>
+					<advancedProp name="iValidation" value="0"/>
+					<advancedProp name="bExtensions" value="true"/>
+					<advancedProp name="iWhitespace" value="0"/>
+					<advancedProp name="sInitialTemplate" value=""/>
+					<advancedProp name="bTinyTree" value="true"/>
+					<advancedProp name="xsltVersion" value="2.0"/>
+					<advancedProp name="bWarnings" value="true"/>
+					<advancedProp name="bUseDTD" value="false"/>
+					<advancedProp name="iErrorHandling" value="fatal"/>
+				</scenario>
+			</scenarios>
+			<MapperMetaTag>
+				<MapperInfo srcSchemaPathIsRelative="yes" srcSchemaInterpretAsXML="no" destSchemaPath="" destSchemaRoot="" destSchemaPathIsRelative="yes" destSchemaInterpretAsXML="no"/>
+				<MapperBlockPosition></MapperBlockPosition>
+				<TemplateContext></TemplateContext>
+				<MapperFilter side="source"></MapperFilter>
+			</MapperMetaTag>
+		</file>
+		<file plugId="2" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/VideoCenter/videosDebug.xsl">
+			<scenarios>
+				<scenario default="yes" name="DebugVideosScenario" userelativepaths="yes" externalpreview="no" url="videos.xml" htmlbaseurl="..\VideoCenter" outputurl="" processortype="saxon8" useresolver="yes" profilemode="0" profiledepth=""
+				          profilelength="" urlprofilexml="" commandline="" additionalpath="" additionalclasspath="" postprocessortype="none" postprocesscommandline="" postprocessadditionalpath="" postprocessgeneratedext="" validateoutput="no"
+				          validator="internal" customvalidator="">
+					<parameterValue name="VideoName" value="'Contact'"/>
+					<advancedProp name="sInitialMode" value=""/>
+					<advancedProp name="bXsltOneIsOkay" value="true"/>
+					<advancedProp name="bSchemaAware" value="true"/>
+					<advancedProp name="bGenerateByteCode" value="true"/>
+					<advancedProp name="bXml11" value="false"/>
+					<advancedProp name="iValidation" value="0"/>
+					<advancedProp name="bExtensions" value="true"/>
+					<advancedProp name="iWhitespace" value="0"/>
+					<advancedProp name="sInitialTemplate" value=""/>
+					<advancedProp name="bTinyTree" value="true"/>
+					<advancedProp name="xsltVersion" value="2.0"/>
+					<advancedProp name="bWarnings" value="true"/>
+					<advancedProp name="bUseDTD" value="false"/>
+					<advancedProp name="iErrorHandling" value="fatal"/>
+				</scenario>
+			</scenarios>
+			<MapperMetaTag>
+				<MapperInfo srcSchemaPathIsRelative="yes" srcSchemaInterpretAsXML="no" destSchemaPath="" destSchemaRoot="" destSchemaPathIsRelative="yes" destSchemaInterpretAsXML="no"/>
+				<MapperBlockPosition></MapperBlockPosition>
+				<TemplateContext></TemplateContext>
+				<MapperFilter side="source"></MapperFilter>
+			</MapperMetaTag>
+		</file>
+		<file plugId="2" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/VideoCenter/sample2Video.xsl">
+			<scenarios>
+				<scenario default="yes" name="Video Scenario 2" userelativepaths="yes" externalpreview="no" url="videos.xml" htmlbaseurl="..\VideoCenter" outputurl="" processortype="saxon8" useresolver="yes" profilemode="0" profiledepth="" profilelength=""
+				          urlprofilexml="" commandline="" additionalpath="" additionalclasspath="" postprocessortype="none" postprocesscommandline="" postprocessadditionalpath="" postprocessgeneratedext="" validateoutput="no" validator="internal"
+				          customvalidator="">
+					<advancedProp name="sInitialMode" value=""/>
+					<advancedProp name="bXsltOneIsOkay" value="true"/>
+					<advancedProp name="bSchemaAware" value="true"/>
+					<advancedProp name="bGenerateByteCode" value="true"/>
+					<advancedProp name="bXml11" value="false"/>
+					<advancedProp name="iValidation" value="0"/>
+					<advancedProp name="bExtensions" value="true"/>
+					<advancedProp name="iWhitespace" value="0"/>
+					<advancedProp name="sInitialTemplate" value=""/>
+					<advancedProp name="bTinyTree" value="true"/>
+					<advancedProp name="xsltVersion" value="2.0"/>
+					<advancedProp name="bWarnings" value="true"/>
+					<advancedProp name="bUseDTD" value="false"/>
+					<advancedProp name="iErrorHandling" value="fatal"/>
+				</scenario>
+			</scenarios>
+			<MapperMetaTag>
+				<MapperInfo srcSchemaPathIsRelative="yes" srcSchemaInterpretAsXML="no" destSchemaPath="" destSchemaRoot="" destSchemaPathIsRelative="yes" destSchemaInterpretAsXML="no"/>
+				<MapperBlockPosition></MapperBlockPosition>
+				<TemplateContext></TemplateContext>
+				<MapperFilter side="source"></MapperFilter>
+			</MapperMetaTag>
+		</file>
+	</project>
+	<project type="cont" name="XQuery" expanded="no" catalog="no" pluginOwner="-1">
+		<file plugId="9" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/XQuery/Multiplication table.xquery">
+			<scenarios>
+				<scenario default="yes" name="Scenario1" userelativepaths="yes" externalpreview="no" useresolver="no" url="" outputurl="" processortype="datadirect" tcpport="0" profilemode="0" profiledepth="" profilelength="" urlprofilexml=""
+				          commandline="" additionalpath="" additionalclasspath="" postprocessortype="none" postprocesscommandline="" postprocessadditionalpath="" postprocessgeneratedext="" host="" port="0" user="" password="" validateoutput="no"
+				          validator="internal" customvalidator="">
+					<advancedProperties name="DocumentURIResolver" value=""/>
+					<advancedProperties name="CollectionURIResolver" value=""/>
+					<advancedProperties name="ModuleURIResolver" value=""/>
+				</scenario>
+			</scenarios>
+			<MapperMetaTag>
+				<MapperInfo srcSchemaPathIsRelative="yes" srcSchemaInterpretAsXML="no" destSchemaPath="" destSchemaRoot="" destSchemaPathIsRelative="yes" destSchemaInterpretAsXML="no"/>
+				<MapperBlockPosition></MapperBlockPosition>
+				<TemplateContext></TemplateContext>
+				<MapperFilter side="source"></MapperFilter>
+			</MapperMetaTag>
+		</file>
+		<file plugId="9" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/XQuery/PARTS-Q1.xquery">
+			<scenarios>
+				<scenario default="yes" name="Scenario1" userelativepaths="yes" externalpreview="no" useresolver="no" url="partlist.xml" outputurl="" processortype="datadirect" tcpport="0" profilemode="0" profiledepth="" profilelength="" urlprofilexml=""
+				          commandline="" additionalpath="" additionalclasspath="" postprocessortype="none" postprocesscommandline="" postprocessadditionalpath="" postprocessgeneratedext="" host="" port="0" user="" password="" validateoutput="no"
+				          validator="internal" customvalidator="">
+					<advancedProperties name="DocumentURIResolver" value=""/>
+					<advancedProperties name="CollectionURIResolver" value=""/>
+					<advancedProperties name="ModuleURIResolver" value=""/>
+				</scenario>
+			</scenarios>
+			<MapperMetaTag>
+				<MapperInfo srcSchemaPathIsRelative="yes" srcSchemaInterpretAsXML="no" destSchemaPath="" destSchemaRoot="" destSchemaPathIsRelative="yes" destSchemaInterpretAsXML="no"/>
+				<MapperBlockPosition></MapperBlockPosition>
+				<TemplateContext></TemplateContext>
+				<MapperFilter side="source"></MapperFilter>
+			</MapperMetaTag>
+		</file>
+		<file plugId="9" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/XQuery/NS-Q7.xquery">
+			<scenarios>
+				<scenario default="yes" name="Scenario1" userelativepaths="yes" externalpreview="no" useresolver="no" url="auction.xml" outputurl="" processortype="datadirect" tcpport="0" profilemode="0" profiledepth="" profilelength="" urlprofilexml=""
+				          commandline="" additionalpath="" additionalclasspath="" postprocessortype="none" postprocesscommandline="" postprocessadditionalpath="" postprocessgeneratedext="" host="" port="0" user="" password="" validateoutput="no"
+				          validator="internal" customvalidator="">
+					<advancedProperties name="DocumentURIResolver" value=""/>
+					<advancedProperties name="CollectionURIResolver" value=""/>
+					<advancedProperties name="ModuleURIResolver" value=""/>
+				</scenario>
+			</scenarios>
+			<MapperMetaTag>
+				<MapperInfo srcSchemaPathIsRelative="yes" srcSchemaInterpretAsXML="no" destSchemaPath="" destSchemaRoot="" destSchemaPathIsRelative="yes" destSchemaInterpretAsXML="no"/>
+				<MapperBlockPosition></MapperBlockPosition>
+				<TemplateContext></TemplateContext>
+				<MapperFilter side="source"></MapperFilter>
+			</MapperMetaTag>
+		</file>
+		<file plugId="9" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/XQuery/R-Q2.xquery">
+			<scenarios>
+				<scenario default="yes" name="Scenario1" userelativepaths="yes" externalpreview="no" useresolver="no" url="" outputurl="" processortype="datadirect" tcpport="0" profilemode="0" profiledepth="" profilelength="" urlprofilexml=""
+				          commandline="" additionalpath="" additionalclasspath="" postprocessortype="none" postprocesscommandline="" postprocessadditionalpath="" postprocessgeneratedext="" host="" port="0" user="" password="" validateoutput="no"
+				          validator="internal" customvalidator="">
+					<advancedProperties name="DocumentURIResolver" value=""/>
+					<advancedProperties name="CollectionURIResolver" value=""/>
+					<advancedProperties name="ModuleURIResolver" value=""/>
+				</scenario>
+			</scenarios>
+			<MapperMetaTag>
+				<MapperInfo srcSchemaPathIsRelative="yes" srcSchemaInterpretAsXML="no" destSchemaPath="" destSchemaRoot="" destSchemaPathIsRelative="yes" destSchemaInterpretAsXML="no"/>
+				<MapperBlockPosition></MapperBlockPosition>
+				<TemplateContext></TemplateContext>
+				<MapperFilter side="source"></MapperFilter>
+			</MapperMetaTag>
+		</file>
+		<file plugId="9" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/XQuery/XMP-Q4.xquery">
+			<scenarios>
+				<scenario default="yes" name="Scenario1" userelativepaths="yes" externalpreview="no" useresolver="no" url="bib.xml" outputurl="" processortype="datadirect" tcpport="0" profilemode="0" profiledepth="" profilelength="" urlprofilexml=""
+				          commandline="" additionalpath="" additionalclasspath="" postprocessortype="none" postprocesscommandline="" postprocessadditionalpath="" postprocessgeneratedext="" host="" port="0" user="" password="" validateoutput="no"
+				          validator="internal" customvalidator="">
+					<advancedProperties name="DocumentURIResolver" value=""/>
+					<advancedProperties name="CollectionURIResolver" value=""/>
+					<advancedProperties name="ModuleURIResolver" value=""/>
+				</scenario>
+			</scenarios>
+			<MapperMetaTag>
+				<MapperInfo srcSchemaPathIsRelative="yes" srcSchemaInterpretAsXML="no" destSchemaPath="" destSchemaRoot="" destSchemaPathIsRelative="yes" destSchemaInterpretAsXML="no"/>
+				<MapperBlockPosition></MapperBlockPosition>
+				<TemplateContext></TemplateContext>
+				<MapperFilter side="source"></MapperFilter>
+			</MapperMetaTag>
+		</file>
+		<project type="cont" name="XML sources" expanded="no" catalog="no" pluginOwner="-1">
+			<file plugId="3" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/XQuery/bib.xml" catalog="no">
+				<queries/>
+				<namespaces/>
+			</file>
+			<file plugId="3" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/XQuery/items.xml" catalog="no">
+				<queries/>
+				<namespaces/>
+			</file>
+			<file plugId="3" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/XQuery/bids.xml" catalog="no">
+				<queries/>
+				<namespaces/>
+			</file>
+			<file plugId="3" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/XQuery/partlist.xml" catalog="no">
+				<queries/>
+				<namespaces/>
+			</file>
+			<file plugId="3" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/XQuery/auction.xml" catalog="no">
+				<queries/>
+				<namespaces/>
+			</file>
+		</project>
+	</project>
+	<project type="cont" name="Convert to XML" expanded="no" catalog="no" pluginOwner="-1">
+		<file plugId="15" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/Components/XML Converters for Java/examples/three.conv"/>
+		<file plugId="6" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/Components/XML Converters for Java/examples/demo.java">
+			<args args=""/>
+		</file>
+	</project>
+	<project type="cont" name="EDItoXML" expanded="no" catalog="no" pluginOwner="-1">
+		<file plugId="5" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/EDItoXML/831.sef">
+			<scenarios>
+				<scenario default="yes" name="831" userelativepaths="yes" externalpreview="no" url="831.x12" outputurl=""/>
+			</scenarios>
+		</file>
+		<file plugId="5" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/EDItoXML/nodates.sef">
+			<scenarios>
+				<scenario default="yes" name="nodates" userelativepaths="yes" externalpreview="no" url="nodates.x12" outputurl=""/>
+			</scenarios>
+		</file>
+		<file plugId="5" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/EDItoXML/code99.sef">
+			<scenarios>
+				<scenario default="yes" name="code99" userelativepaths="yes" externalpreview="no" url="code99.x12" outputurl=""/>
+			</scenarios>
+		</file>
+		<file plugId="5" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/EDItoXML/slsrpt.sef">
+			<scenarios>
+				<scenario default="yes" name="slsrpt" userelativepaths="yes" externalpreview="no" url="slsrpt.edifice" outputurl=""/>
+			</scenarios>
+		</file>
+		<file plugId="5" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/EDItoXML/medeur.sef">
+			<scenarios>
+				<scenario default="yes" name="MEDEUR" userelativepaths="yes" externalpreview="no" url="" outputurl=""/>
+			</scenarios>
+		</file>
+		<project type="cont" name="EDI files" expanded="yes" catalog="no" pluginOwner="-1">
+			<file plugId="6" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/EDItoXML/831.x12">
+				<args args=""/>
+			</file>
+			<file plugId="6" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/EDItoXML/nodates.x12">
+				<args args=""/>
+			</file>
+			<file plugId="6" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/EDItoXML/code99.x12">
+				<args args=""/>
+			</file>
+			<file plugId="6" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/EDItoXML/slsrpt.edifice">
+				<args args=""/>
+			</file>
+		</project>
+	</project>
+	<project type="cont" name="simpleMappings" expanded="no" catalog="no" pluginOwner="-1">
+		<file plugId="3" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/simpleMappings/books.xml" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/simpleMappings/catalog.xml" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/simpleMappings/purchaseOrder.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="2" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/simpleMappings/sampleBooksToCatalog.xsl">
+			<scenarios>
+				<scenario default="yes" name="books.xml" userelativepaths="yes" externalpreview="no" url="books.xml" htmlbaseurl="" outputurl="" processortype="saxon8" useresolver="yes" profilemode="0" profiledepth="" profilelength="" urlprofilexml=""
+				          commandline="" additionalpath="" additionalclasspath="" postprocessortype="none" postprocesscommandline="" postprocessadditionalpath="" postprocessgeneratedext="" validateoutput="no" validator="internal" customvalidator="">
+					<advancedProp name="sInitialMode" value=""/>
+					<advancedProp name="bXsltOneIsOkay" value="true"/>
+					<advancedProp name="bSchemaAware" value="true"/>
+					<advancedProp name="bGenerateByteCode" value="true"/>
+					<advancedProp name="bXml11" value="false"/>
+					<advancedProp name="iValidation" value="0"/>
+					<advancedProp name="bExtensions" value="true"/>
+					<advancedProp name="iWhitespace" value="0"/>
+					<advancedProp name="sInitialTemplate" value=""/>
+					<advancedProp name="bTinyTree" value="true"/>
+					<advancedProp name="xsltVersion" value="2.0"/>
+					<advancedProp name="bWarnings" value="true"/>
+					<advancedProp name="bUseDTD" value="false"/>
+					<advancedProp name="iErrorHandling" value="fatal"/>
+				</scenario>
+			</scenarios>
+			<MapperMetaTag>
+				<MapperInfo srcSchemaPathIsRelative="yes" srcSchemaInterpretAsXML="no" destSchemaPath="" destSchemaRoot="" destSchemaPathIsRelative="yes" destSchemaInterpretAsXML="no"/>
+				<MapperBlockPosition></MapperBlockPosition>
+				<TemplateContext></TemplateContext>
+				<MapperFilter side="source"></MapperFilter>
+			</MapperMetaTag>
+		</file>
+	</project>
+	<project type="cont" name="XSLFormattingObjects" expanded="no" catalog="no" pluginOwner="-1">
+		<file plugId="2" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/XSLFormattingObjects/catalog.xsl">
+			<scenarios>
+				<scenario default="yes" name="video" userelativepaths="yes" externalpreview="no" url="..\VideoCenter\videos.xml" htmlbaseurl="" outputurl="" processortype="saxon8" useresolver="yes" profilemode="0" profiledepth="" profilelength=""
+				          urlprofilexml="" commandline="" additionalpath="" additionalclasspath="" postprocessortype="renderx" postprocesscommandline="" postprocessadditionalpath="" postprocessgeneratedext="" validateoutput="no" validator="internal"
+				          customvalidator="">
+					<advancedProp name="sInitialMode" value=""/>
+					<advancedProp name="bXsltOneIsOkay" value="true"/>
+					<advancedProp name="bSchemaAware" value="true"/>
+					<advancedProp name="bGenerateByteCode" value="true"/>
+					<advancedProp name="bXml11" value="false"/>
+					<advancedProp name="iValidation" value="0"/>
+					<advancedProp name="bExtensions" value="true"/>
+					<advancedProp name="iWhitespace" value="0"/>
+					<advancedProp name="sInitialTemplate" value=""/>
+					<advancedProp name="bTinyTree" value="true"/>
+					<advancedProp name="xsltVersion" value="2.0"/>
+					<advancedProp name="bWarnings" value="true"/>
+					<advancedProp name="bUseDTD" value="false"/>
+					<advancedProp name="iErrorHandling" value="fatal"/>
+				</scenario>
+			</scenarios>
+			<MapperMetaTag>
+				<MapperInfo srcSchemaPathIsRelative="yes" srcSchemaInterpretAsXML="no" destSchemaPath="" destSchemaRoot="" destSchemaPathIsRelative="yes" destSchemaInterpretAsXML="no"/>
+				<MapperBlockPosition></MapperBlockPosition>
+				<TemplateContext></TemplateContext>
+				<MapperFilter side="source"></MapperFilter>
+			</MapperMetaTag>
+		</file>
+		<file plugId="2" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/XSLFormattingObjects/minimal-catalog.xsl">
+			<scenarios>
+				<scenario default="yes" name="video" userelativepaths="yes" externalpreview="no" url="..\VideoCenter\videos.xml" htmlbaseurl="" outputurl="" processortype="saxon8" useresolver="yes" profilemode="0" profiledepth="" profilelength=""
+				          urlprofilexml="" commandline="" additionalpath="" additionalclasspath="" postprocessortype="renderx" postprocesscommandline="" postprocessadditionalpath="" postprocessgeneratedext="" validateoutput="no" validator="internal"
+				          customvalidator="">
+					<advancedProp name="sInitialMode" value=""/>
+					<advancedProp name="bXsltOneIsOkay" value="true"/>
+					<advancedProp name="bSchemaAware" value="true"/>
+					<advancedProp name="bGenerateByteCode" value="true"/>
+					<advancedProp name="bXml11" value="false"/>
+					<advancedProp name="iValidation" value="0"/>
+					<advancedProp name="bExtensions" value="true"/>
+					<advancedProp name="iWhitespace" value="0"/>
+					<advancedProp name="sInitialTemplate" value=""/>
+					<advancedProp name="bTinyTree" value="true"/>
+					<advancedProp name="xsltVersion" value="2.0"/>
+					<advancedProp name="bWarnings" value="true"/>
+					<advancedProp name="bUseDTD" value="false"/>
+					<advancedProp name="iErrorHandling" value="fatal"/>
+				</scenario>
+			</scenarios>
+			<MapperMetaTag>
+				<MapperInfo srcSchemaPathIsRelative="yes" srcSchemaInterpretAsXML="no" destSchemaPath="" destSchemaRoot="" destSchemaPathIsRelative="yes" destSchemaInterpretAsXML="no"/>
+				<MapperBlockPosition></MapperBlockPosition>
+				<TemplateContext></TemplateContext>
+				<MapperFilter side="source"></MapperFilter>
+			</MapperMetaTag>
+		</file>
+	</project>
+	<project type="cont" name="SVG" expanded="no" catalog="no" pluginOwner="-1">
+		<file plugId="3" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/SVG/chart.xml" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="2" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/SVG/chart.xsl">
+			<scenarios>
+				<scenario default="yes" name="Scenario1" userelativepaths="yes" externalpreview="no" url="chart.xml" htmlbaseurl="" outputurl="" processortype="saxon8" useresolver="yes" profilemode="0" profiledepth="" profilelength="" urlprofilexml=""
+				          commandline="" additionalpath="" additionalclasspath="" postprocessortype="none" postprocesscommandline="" postprocessadditionalpath="" postprocessgeneratedext="" validateoutput="no" validator="internal" customvalidator="">
+					<advancedProp name="sInitialMode" value=""/>
+					<advancedProp name="bXsltOneIsOkay" value="true"/>
+					<advancedProp name="bSchemaAware" value="true"/>
+					<advancedProp name="bGenerateByteCode" value="true"/>
+					<advancedProp name="bXml11" value="false"/>
+					<advancedProp name="iValidation" value="0"/>
+					<advancedProp name="bExtensions" value="true"/>
+					<advancedProp name="iWhitespace" value="0"/>
+					<advancedProp name="sInitialTemplate" value=""/>
+					<advancedProp name="bTinyTree" value="true"/>
+					<advancedProp name="xsltVersion" value="2.0"/>
+					<advancedProp name="bWarnings" value="true"/>
+					<advancedProp name="bUseDTD" value="false"/>
+					<advancedProp name="iErrorHandling" value="fatal"/>
+				</scenario>
+			</scenarios>
+			<MapperMetaTag>
+				<MapperInfo srcSchemaPathIsRelative="yes" srcSchemaInterpretAsXML="no" destSchemaPath="" destSchemaRoot="" destSchemaPathIsRelative="yes" destSchemaInterpretAsXML="no"/>
+				<MapperBlockPosition></MapperBlockPosition>
+				<TemplateContext></TemplateContext>
+				<MapperFilter side="source"></MapperFilter>
+			</MapperMetaTag>
+		</file>
+	</project>
+	<project type="cont" name="quotes" expanded="no" catalog="no" pluginOwner="-1">
+		<file plugId="3" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/quotes/your-quotes.xml" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="2" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/quotes/your-quotes.xsl">
+			<scenarios>
+				<scenario default="yes" name="your-quotes" userelativepaths="yes" externalpreview="no" url="your-quotes.xml" htmlbaseurl="" outputurl="" processortype="saxon8" useresolver="yes" profilemode="0" profiledepth="" profilelength=""
+				          urlprofilexml="" commandline="" additionalpath="" additionalclasspath="" postprocessortype="none" postprocesscommandline="" postprocessadditionalpath="" postprocessgeneratedext="" validateoutput="no" validator="internal"
+				          customvalidator="">
+					<advancedProp name="sInitialMode" value=""/>
+					<advancedProp name="bXsltOneIsOkay" value="true"/>
+					<advancedProp name="bSchemaAware" value="true"/>
+					<advancedProp name="bGenerateByteCode" value="true"/>
+					<advancedProp name="bXml11" value="false"/>
+					<advancedProp name="iValidation" value="0"/>
+					<advancedProp name="bExtensions" value="true"/>
+					<advancedProp name="iWhitespace" value="0"/>
+					<advancedProp name="sInitialTemplate" value=""/>
+					<advancedProp name="bTinyTree" value="true"/>
+					<advancedProp name="xsltVersion" value="2.0"/>
+					<advancedProp name="bWarnings" value="true"/>
+					<advancedProp name="bUseDTD" value="false"/>
+					<advancedProp name="iErrorHandling" value="fatal"/>
+				</scenario>
+			</scenarios>
+			<MapperMetaTag>
+				<MapperInfo srcSchemaPathIsRelative="yes" srcSchemaInterpretAsXML="no" destSchemaPath="" destSchemaRoot="" destSchemaPathIsRelative="yes" destSchemaInterpretAsXML="no"/>
+				<MapperBlockPosition></MapperBlockPosition>
+				<TemplateContext></TemplateContext>
+				<MapperFilter side="source"></MapperFilter>
+			</MapperMetaTag>
+		</file>
+	</project>
+	<project type="cont" name="javaExtension" expanded="no" catalog="no" pluginOwner="-1">
+		<file plugId="9" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/javaExtension/IntDate.xquery">
+			<scenarios>
+				<scenario default="yes" name="IntDate" userelativepaths="yes" externalpreview="no" useresolver="no" url="IntDate.xml" outputurl="" processortype="datadirect" tcpport="0" profilemode="0" profiledepth="" profilelength="" urlprofilexml=""
+				          commandline="" additionalpath="" additionalclasspath="" postprocessortype="none" postprocesscommandline="" postprocessadditionalpath="" postprocessgeneratedext="" host="" port="0" user="" password="" validateoutput="no"
+				          validator="internal" customvalidator="">
+					<advancedProperties name="DocumentURIResolver" value=""/>
+					<advancedProperties name="CollectionURIResolver" value=""/>
+					<advancedProperties name="ModuleURIResolver" value=""/>
+				</scenario>
+			</scenarios>
+			<MapperMetaTag>
+				<MapperInfo srcSchemaPathIsRelative="yes" srcSchemaInterpretAsXML="no" destSchemaPath="" destSchemaRoot="" destSchemaPathIsRelative="yes" destSchemaInterpretAsXML="no"/>
+				<MapperBlockPosition></MapperBlockPosition>
+				<TemplateContext></TemplateContext>
+				<MapperFilter side="source"></MapperFilter>
+			</MapperMetaTag>
+		</file>
+		<file plugId="6" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/javaExtension/IntDate.java">
+			<args args=""/>
+		</file>
+		<file plugId="2" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/javaExtension/IntDate.xsl">
+			<scenarios>
+				<scenario default="yes" name="IntDate" userelativepaths="yes" externalpreview="no" url="IntDate.xml" htmlbaseurl="" outputurl="" processortype="saxon8" useresolver="yes" profilemode="0" profiledepth="" profilelength="" urlprofilexml=""
+				          commandline="" additionalpath="" additionalclasspath="" postprocessortype="none" postprocesscommandline="" postprocessadditionalpath="" postprocessgeneratedext="" validateoutput="no" validator="internal" customvalidator="">
+					<advancedProp name="sInitialMode" value=""/>
+					<advancedProp name="bXsltOneIsOkay" value="true"/>
+					<advancedProp name="bSchemaAware" value="true"/>
+					<advancedProp name="bGenerateByteCode" value="true"/>
+					<advancedProp name="bXml11" value="false"/>
+					<advancedProp name="iValidation" value="0"/>
+					<advancedProp name="bExtensions" value="true"/>
+					<advancedProp name="iWhitespace" value="0"/>
+					<advancedProp name="sInitialTemplate" value=""/>
+					<advancedProp name="bTinyTree" value="true"/>
+					<advancedProp name="xsltVersion" value="2.0"/>
+					<advancedProp name="bWarnings" value="true"/>
+					<advancedProp name="bUseDTD" value="false"/>
+					<advancedProp name="iErrorHandling" value="fatal"/>
+				</scenario>
+			</scenarios>
+			<MapperMetaTag>
+				<MapperInfo srcSchemaPathIsRelative="yes" srcSchemaInterpretAsXML="no" destSchemaPath="" destSchemaRoot="" destSchemaPathIsRelative="yes" destSchemaInterpretAsXML="no"/>
+				<MapperBlockPosition></MapperBlockPosition>
+				<TemplateContext></TemplateContext>
+				<MapperFilter side="source"></MapperFilter>
+			</MapperMetaTag>
+		</file>
+		<file plugId="3" URL="file:///c:/Program Files (x86)/Stylus Studio X15 XML Enterprise Suite/examples/javaExtension/IntDate.xml" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+	</project>
+</project>

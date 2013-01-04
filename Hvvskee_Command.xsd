@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<xsd:include schemaLocation="Hvvskee_CmdHeader.xsd"/>
+	<xsd:include schemaLocation="Hvvskee_CmdBody.xsd"/>
+	<xsd:include schemaLocation="Hvvskee_CmdTrailer.xsd"/>
+
+	<xsd:complexType name="Command">
+		<xsd:sequence>
+			<xsd:element ref="header" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="body" minOccurs="0"/>
+			<xsd:element ref="trailer" minOccurs="0" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+</xsd:schema>

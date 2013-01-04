@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<hvvskee xmlns="http://www.hivves.com/standards/2013/hvvskee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.hivves.com/standards/2013/hvvskee file:///d:/AA_HIVVES/XHvvskee/Hvvskee.xsd">
+	<header>
+		<identity>
+			<msguid>1234567</msguid>
+			<msgcorelid>34556677</msgcorelid>
+		</identity>
+		<routing>
+			<fromAddr>mvw@bancstreet.com</fromAddr>
+			<toAddr>mvw@bancstreet.com</toAddr>
+		</routing>
+		<manifest>
+			<config></config>
+			<security></security>
+			<content></content>
+		</manifest>
+	</header>
+	<query xsi:type="LocalQuery">
+		<select>
+			<result>
+				<field>
+
+					<uName>column 01</uName>
+					<rName>COL01</rName>
+					<lName>COL01</lName>
+					<cName>COL01</cName>
+					<rVal>aa</rVal>
+					<lVal>aa</lVal>
+					<cVal>aa</cVal>
+
+				</field>
+			</result>
+			<from>
+				<source></source>
+			</from>
+			<where>
+				<exp></exp>
+				<and/>
+				<exp></exp>
+				<or/>
+				<not></not>
+			</where>
+		</select>
+	</query>
+	<trailer>
+		<manifest>
+			<config></config>
+		</manifest>
+	</trailer>
+</hvvskee>
