@@ -1,4 +1,7 @@
 <?xml version="1.0"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:schema 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+				xmlns="urn:hivves:udml:schema:2012:01"
+				targetNamespace="urn:hivves:udml:schema:2012:01"
+				>
 	<xsd:include schemaLocation="Hvvskee_Foundation.xsd"/>
 </xsd:schema>

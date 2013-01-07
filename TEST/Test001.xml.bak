@@ -1,13 +1,14 @@
 <?xml version="1.0"?>
-<hvvskee xmlns="http://www.hivves.com/standards/2013/hvvskee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.hivves.com/standards/2013/hvvskee file:///d:/AA_HIVVES/XHvvskee/Hvvskee.xsd">
+<hvvskee xmlns:ud="urn:hivves:uddl:schema:2012:01" xmlns:um="urn:hivves:udml:schema:2012:01" xmlns:uq="urn:hivves:udql:schema:2012:01" xmlns="http://www.hivves.com/standards/2013/hvvskee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.hivves.com/standards/2013/hvvskee file:///d:/AA_HIVVES/XHvvskee/Hvvskee.xsd">
 	<header>
 		<identity>
 			<msguid>1234567</msguid>
 			<msgcorelid>34556677</msgcorelid>
 		</identity>
 		<routing>
-			<fromAddr>mvw@bancstreet.com</fromAddr>
-			<toAddr>mvw@bancstreet.com</toAddr>
+			<from>mvw@bancstreet.com</from>
+			<to>mvw@bancstreet.com</to>
 		</routing>
 		<manifest>
 			<config></config>
@@ -16,30 +17,39 @@
 		</manifest>
 	</header>
 	<query xsi:type="LocalQuery">
-		<select>
-			<result>
-				<field>
+		<uq:select>
+			<uq:result name="Main" isPrimary="true" isRoot="true" id="RS01" >
+				<uq:field name="col01" id="c01" >
+					<uq:uName>column01</uq:uName>
+					<uq:rName>COL01</uq:rName>
+					<uq:lName>COL01</uq:lName>
+					<uq:cName>COL01</uq:cName>
+					<uq:rVal>1</uq:rVal>
+					<uq:lVal>1</uq:lVal>
+					<uq:cVal>1</uq:cVal>
+				</uq:field>
+				<uq:field name="col02" id="c01" >
+					<uq:uName>column01</uq:uName>
+				</uq:field>
+			</uq:result>
+			<uq:from>
+				<uq:source></uq:source>
+			</uq:from>
+			<uq:join></uq:join>
+			<uq:where>
+				<uq:exp></uq:exp>
+				<uq:and/>
+				<uq:exp></uq:exp>
+				<uq:or/>
+				<uq:not></uq:not>
+			</uq:where>
+			<uq:filter></uq:filter>
+			<uq:groupby></uq:groupby>
+			<uq:having></uq:having>
 
-					<uName>column 01</uName>
-					<rName>COL01</rName>
-					<lName>COL01</lName>
-					<cName>COL01</cName>
-					<rVal>aa</rVal>
-					<lVal>aa</lVal>
-					<cVal>aa</cVal>
-				</field>
-			</result>
-			<from>
-				<source></source>
-			</from>
-			<where>
-				<exp></exp>
-				<and/>
-				<exp></exp>
-				<or/>
-				<not></not>
-			</where>
-		</select>
+			<uq:orderby></uq:orderby>
+
+		</uq:select>
 	</query>
 	<trailer>
 		<manifest>

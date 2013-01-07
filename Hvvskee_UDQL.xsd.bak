@@ -1,47 +1,71 @@
 <?xml version="1.0"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:schema 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+				xmlns="urn:hivves:udql:schema:2012:01"
+				targetNamespace="urn:hivves:udql:schema:2012:01">
+
 	<xsd:include schemaLocation="Hvvskee_Foundation.xsd"/>
 
-	<xsd:element name="select" type="UQSelect"/>
-	<xsd:element name="result" type="UQResult"/>
-	<xsd:element name="from" type="UQFrom"/>
-	<xsd:element name="where" type="UQWhere"/>
+	<xsd:element name="select" type="Select"/>
+	<xsd:element name="result" type="Result"/>
+	<xsd:element name="from" type="From"/>
+	<xsd:element name="where" type="Where"/>
 
-	<xsd:element name="field" type="UQField"/>
-	<xsd:element name="source" type="UQSource"/>
-	<xsd:element name="exp" type="UQExp"/>
-	<xsd:element name="and" type="UQExp"/>
-	<xsd:element name="or" type="UQExp"/>
-	<xsd:element name="not" type="UQExp"/>
+	<xsd:element name="field" type="Field"/>
+	<xsd:element name="source" type="Source"/>
+	<xsd:element name="exp" type="Exp"/>
+	<xsd:element name="and" type="Exp"/>
+	<xsd:element name="or" type="Exp"/>
+	<xsd:element name="not" type="Exp"/>
 
-	<xsd:element name="rname" type="UQExp"/>
-	<xsd:element name="lname" type="UQExp"/>
-	<xsd:element name="cname" type="UQExp"/>
-	<xsd:element name="uname" type="UQExp"/>
+	<xsd:element name="rName" type="Exp"/>
+	<xsd:element name="lName" type="Exp"/>
+	<xsd:element name="cName" type="Exp"/>
+	<xsd:element name="uName" type="Exp"/>
+
+	<xsd:element name="rVal" type="Exp"/>
+	<xsd:element name="lVal" type="Exp"/>
+	<xsd:element name="cVal" type="Exp"/>
+
+	<xsd:element name="join" type="Exp"/>
+	<xsd:element name="root" type="Exp"/>
+	<xsd:element name="groupby" type="Exp"/>
+	<xsd:element name="having" type="Exp"/>
+	<xsd:element name="orderby" type="Exp"/>
+	<xsd:element name="filter" type="Exp"/>
 
 
-	<xsd:complexType name="UQSelect">
+	<xsd:complexType name="Select">
 		<xsd:sequence>
-			<xsd:element ref="result" minOccurs="1" maxOccurs="1"/>
+			<xsd:element ref="result" minOccurs="1" maxOccurs="unbounded"/>
 			<xsd:element ref="from" minOccurs="1" maxOccurs="1"/>
+			<xsd:element ref="join" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="where" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="filter" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="root" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="groupby" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="having" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="orderby" minOccurs="0" maxOccurs="1"/>
 		</xsd:sequence>
 	</xsd:complexType>
 
-	<xsd:complexType name="UQResult">
+	<xsd:complexType name="Result">
 		<xsd:sequence>
-			<xsd:element ref="field" minOccurs="1" maxOccurs="1"/>
+			<xsd:element ref="field" minOccurs="1" maxOccurs="unbounded"/>
 		</xsd:sequence>
+		<xsd:attribute name="isPrimary" type="xsd:boolean" />
+		<xsd:attribute name="isRoot" type="xsd:boolean" />
+		<xsd:attribute name="name" type="xsd:string" />
+		<xsd:attribute name="id" type="xsd:string" />
 	</xsd:complexType>
 
-	<xsd:complexType name="UQFrom">
+	<xsd:complexType name="From">
 		<xsd:sequence>
 			<xsd:element ref="source" minOccurs="1" maxOccurs="1"/>
 		</xsd:sequence>
 	</xsd:complexType>
 
 
-	<xsd:complexType name="UQWhere">
+	<xsd:complexType name="Where">
 		<xsd:choice minOccurs="1" maxOccurs="unbounded">
 			<xsd:element ref="exp" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="and" minOccurs="0" maxOccurs="unbounded"/>
@@ -51,30 +75,32 @@
 	</xsd:complexType>
 
 
-	<xsd:complexType name="UQField" mixed="true">
+	<xsd:complexType name="Field" mixed="true">
 		<xsd:sequence>
 			<xsd:element ref="uName" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="rName" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="lName" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="cName" minOccurs="0" maxOccurs="unbounded"/>
 
-			<xsd:element ref="rval" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="lval" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="cval" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="rVal" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="lVal" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cVal" minOccurs="0" maxOccurs="unbounded"/>
+
 		</xsd:sequence>
 	</xsd:complexType>
 
 
-	<xsd:complexType name="UQSource" mixed="true">
+	<xsd:complexType name="Source" mixed="true">
 		<xsd:sequence>
 			<xsd:any minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:sequence>
 	</xsd:complexType>
 
 
-	<xsd:complexType name="UQExp" mixed="true">
+	<xsd:complexType name="Exp" mixed="true">
 		<xsd:sequence>
 			<xsd:any minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:sequence>
 	</xsd:complexType>
+
 </xsd:schema>

@@ -1,9 +1,16 @@
 <?xml version="1.0"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-	<xsd:include schemaLocation="Hvvskee_Foundation.xsd"/>
-	<xsd:include schemaLocation="Hvvskee_UDDL.xsd"/>
-	<xsd:include schemaLocation="Hvvskee_UDML.xsd"/>
-	<xsd:include schemaLocation="Hvvskee_UDQL.xsd"/>
+<xsd:schema 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+				xmlns="http://www.hivves.com/standards/2013/hvvskee"
+				targetNamespace="http://www.hivves.com/standards/2013/hvvskee"
+xmlns:ud="urn:hivves:uddl:schema:2012:01"
+xmlns:um="urn:hivves:udml:schema:2012:01"
+xmlns:uq="urn:hivves:udql:schema:2012:01"
+				>
+
+	<xsd:include 	schemaLocation="Hvvskee_Command.xsd"/>
+	<xsd:import 	namespace="urn:hivves:uddl:schema:2012:01" schemaLocation="Hvvskee_UDDL.xsd"/>
+	<xsd:import 	namespace="urn:hivves:udml:schema:2012:01" schemaLocation="Hvvskee_UDML.xsd"/>
+	<xsd:import 	namespace="urn:hivves:udql:schema:2012:01" schemaLocation="Hvvskee_UDQL.xsd" />
 
 	<xsd:complexType name="QueryType">
 		<xsd:complexContent>
@@ -28,6 +35,9 @@
 	<xsd:complexType name="LocalQuery" mixed="true">
 		<xsd:complexContent>
 		<xsd:extension base="QueryBodyType">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+		<xsd:element ref="uq:select" />
+		</xsd:choice>
 		</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>

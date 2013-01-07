@@ -3,9 +3,5 @@
 
 	<xsd:include schemaLocation="Hvvskee_Command.xsd"/>
 
-	<xsd:complexType name="CmdBodyType">
-	</xsd:complexType>
 
-	<xsd:complexType name="CmdTrailerType">
-	</xsd:complexType>
 </xsd:schema>

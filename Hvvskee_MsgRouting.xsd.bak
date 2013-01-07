@@ -3,8 +3,8 @@
 
 	<xsd:element name="routing" type="MsgRoutingType"/>
 
-	<xsd:element name="fromAddr" type="MsgRouteAddressType"/>
-	<xsd:element name="toAddr" type="MsgRouteAddressType"/>
+	<xsd:element name="from" type="MsgRouteAddressType"/>
+	<xsd:element name="to" type="MsgRouteAddressType"/>
 
 	<xsd:simpleType name="MsgRouteAddressType">
 		<xsd:restriction base="xsd:string">
@@ -13,8 +13,8 @@
 
 	<xsd:complexType name="MsgRoutingType">
 		<xsd:sequence>
-			<xsd:element ref="from" minOccurs="0" maxOccurs="1" />
-			<xsd:element ref="to" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="fromAddr" minOccurs="0" maxOccurs="1" />
+			<xsd:element ref="toAddr" minOccurs="0" maxOccurs="1"/>
 		</xsd:sequence>
 	</xsd:complexType>
 
